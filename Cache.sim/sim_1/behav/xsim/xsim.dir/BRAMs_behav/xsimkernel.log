@@ -1,0 +1,4 @@
+Running: xsim.dir/BRAMs_behav/xsimk.exe -simmode gui -wdb BRAMs_behav.wdb -simrunnum 0 -socket 7645
+Design successfully loaded
+Design Loading Memory Usage: 7188 KB (Peak: 7188 KB)
+Design Loading CPU Usage: 15 ms
