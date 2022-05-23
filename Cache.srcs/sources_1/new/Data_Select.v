@@ -10,7 +10,7 @@ module Data_Select(
         input [15:0] tag,
 
         output [127:0] cache_out_data,
-        output valid_out
+        output wire valid_out
     );
     wire [15:0] tag1;
     wire [15:0] tag2;
@@ -32,7 +32,7 @@ module Data_Select(
     assign tag_equal3 = tag3 == tag ;
     assign tag_equal4 = tag4 == tag ;
 
-    assin valid_out = (tag_equal1&&doutb1[144])||(tag_equal2&&doutb2[144])||(tag_equal3&&doutb3[144])||(tag_equal4&&doutb4[144]);
+    assign valid_out = (tag_equal1&&doutb1[144])||(tag_equal2&&doutb2[144])||(tag_equal3&&doutb3[144])||(tag_equal4&&doutb4[144]);
     assign cache_out_data =  tag_equal1?doutb1[127:0]:tag_equal2?doutb2[127:0]:tag_equal3?doutb3[127:0]:tag_equal4?doutb4[127:0]:0;
 
 endmodule

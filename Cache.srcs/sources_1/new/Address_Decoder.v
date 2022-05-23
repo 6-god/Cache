@@ -10,11 +10,10 @@ module Address_Decoder(
     input [31:0] address,
     output [15:0] tag,
     output [11:0] index,    //addrb
-    output [3:0] offset,  
+    output [3:0] offset  
 );
-
-    tag[15:0] = address[15:0];
-    index[11:0] = address[27:16];
-    offset[3:0] = address[31:28];
+    assign tag[15:0] = address[15:0];
+    assign index[11:0] = address[27:16];
+    assign offset[3:0] = address[31:28];
 
 endmodule
