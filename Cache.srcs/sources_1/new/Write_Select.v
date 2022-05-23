@@ -7,13 +7,13 @@ module Write_Select(
     input[3:0] valids,
     input clk,
     input rst,
-    output[3:0] select_signals
+    output reg [3:0] select_signals
 
 );
     wire [3:0] choose;
     reg[1:0] rand_num;
     wire [3:0] rand_choose;
-
+    wire [3:0] select_signal;
     assign choose[0] = ~valids[0];
     assign choose[1] = ~valids[1] & valids[0];
     assign choose[2] = ~valids[2] & valids[1] & valids[0];
@@ -34,6 +34,11 @@ module Write_Select(
     assign rand_choose[2] = rand_num[0] & (!rand_num[1]);
     assign rand_choose[3] = rand_num[0] & rand_num[1];
 
-    assign select_signals = (choose[0]|choose[1]|choose[2]|choose[3])?choose:rand_choose;
+    assign select_signal = (choose[0]|choose[1]|choose[2]|choose[3])?choose:rand_choose;
+    
+    always@(posedge clk) begin
+        #5;
+        select_signals <= select_signal;
+    end
 
 endmodule

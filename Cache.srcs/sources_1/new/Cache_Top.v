@@ -7,6 +7,7 @@ module Cache_Top(
     //input [11:0] write_index, //没有必要输入write_index,因为write_index可在address中被解码
     //input [3:0] write_enable_a,
     input ena,
+	input read_en,
     output [31:0] real_data
 
 );
@@ -88,6 +89,7 @@ Write_Select u_Write_Select(
 	.rst            		( rst            		),
 	.select_signals 		( select_signals 		)   //to BRAMs
 );
+
 
 
 endmodule
