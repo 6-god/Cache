@@ -1,0 +1,23 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Block Memory Generator module Cache_tb.u_Cache_Top.u_BRAMs.bram1.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Cache_tb.u_Cache_Top.u_BRAMs.bram2.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Cache_tb.u_Cache_Top.u_BRAMs.bram3.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Cache_tb.u_Cache_Top.u_BRAMs.bram4.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 150000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram1.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 170000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram1.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 190000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram1.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 210000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram1.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 230000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram2.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 250000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram2.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 270000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram2.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 290000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram2.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 310000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram3.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 330000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram3.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 350000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram3.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 370000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram3.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 390000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram4.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 410000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram4.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 430000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram4.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 450000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram4.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 3a, B  read address: 3a
+blk_mem_gen_v8_4_4 collision detected at time: 470000, Instance: Cache_tb.u_Cache_Top.u_BRAMs.bram2.inst.native_mem_module.blk_mem_gen_v8_4_4_inst, A write address: 42b, B 

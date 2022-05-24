@@ -20,6 +20,7 @@ Compiling module xil_defaultlib.BRAMs
 Compiling module xil_defaultlib.Data_Select
 Compiling module xil_defaultlib.Offset_Mux
 Compiling module xil_defaultlib.Write_Select
+Compiling module xil_defaultlib.Hit_Count
 Compiling module xil_defaultlib.Cache_Top
 Compiling module xil_defaultlib.Cache_tb
 Compiling module xil_defaultlib.glbl

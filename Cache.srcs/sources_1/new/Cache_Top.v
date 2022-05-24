@@ -8,8 +8,9 @@ module Cache_Top(
     //input [3:0] write_enable_a,
     input ena,
 	input read_en,
-    output [31:0] real_data
-
+    output [31:0] real_data,
+	output wire [7:0] hit,
+	output wire [7:0] miss
 );
 
 
@@ -18,7 +19,6 @@ wire [11:0]	index;
 wire [3:0]	offset;
 
 Address_Decoder u_Address_Decoder(
-	//ports
 	.address 		( address 		),
 	.tag     		( tag     		),
 	.index   		( index   		),
@@ -32,9 +32,9 @@ Address_Decoder u_Address_Decoder(
     wire [144:0]	doutb3;
     wire [144:0]	doutb4;
     wire [3:0]	valids;
+    wire [11:0] addrb;
 
 BRAMs u_BRAMs(
-	//ports
 	.clk      		( clk      		),
 	.clk_bram 		( clk_bram 		),
 	.rst      		( rst      		),
@@ -57,7 +57,6 @@ wire [127:0]	cache_out_data;
 wire 	valid_out;
 
 Data_Select u_Data_Select(
-	//ports
 	.doutb1         		( doutb1         		),
 	.doutb2         		( doutb2         		),
 	.doutb3         		( doutb3         		),
@@ -70,7 +69,6 @@ Data_Select u_Data_Select(
 //wire [31:0]	real_data;
 
 Offset_Mux u_Offset_Mux(
-	//ports
 	.offset         		( offset         		),
 	.cache_out_data 		( cache_out_data 		),
 	.real_data      		( real_data      		)   //the real data to be used
@@ -83,13 +81,22 @@ assign wea3 = select_signals[2];
 assign wea4 = select_signals[3];
 
 Write_Select u_Write_Select(
-	//ports
 	.valids         		( valids         		),
 	.clk            		( clk            		),
 	.rst            		( rst            		),
 	.select_signals 		( select_signals 		)   //to BRAMs
 );
 
+
+
+Hit_Count u_Hit_Count(
+	.clk       		( clk       		),
+	.rst       		( rst       		),
+	.read_en   		( read_en   		),
+	.valid_out 		( valid_out 		),
+	.hit       		( hit       		),
+	.miss      		( miss      		)
+);
 
 
 endmodule

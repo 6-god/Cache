@@ -30,7 +30,6 @@ module BRAMs(
   
     
 blk_mem_1 bram1(
-	//ports
 	.clka  		( clk_bram		),
 	.wea   		( wea1   		),
 	.addra 		( addra 		),
@@ -43,7 +42,6 @@ blk_mem_1 bram1(
 
 
 blk_mem_1 bram2(
-	//ports
 	.clka  		( clk_bram 		),
 	.wea   		( wea2   		),
 	.addra 		( addra 		),
@@ -55,7 +53,6 @@ blk_mem_1 bram2(
 );
 
 blk_mem_1 bram3(
-	//ports
 	.clka  		( clk_bram 		),
 	.wea   		( wea3   		),
 	.addra 		( addra 		),
@@ -67,7 +64,6 @@ blk_mem_1 bram3(
 );
 
 blk_mem_1 bram4(
-	//ports
 	.clka  		( clk_bram 		),
 	.wea   		( wea4   		),
 	.addra 		( addra 		),

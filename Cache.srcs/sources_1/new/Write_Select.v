@@ -1,7 +1,7 @@
 /*cache块替换的选择。使用随机替换算法：
-    若四路中有一路（或以上）为空，则直接替换�?
-    若四路全满，则随机�?�择�?路替换；
-    输出为四路select_signal，三路为0，一路为1�?
+    若四路中有一路（或以上）为空，则直接替换�?
+    若四路全满，则随机�?�择�?路替换；
+    输出为四路select_signal，三路为0，一路为1�?
 */
 module Write_Select(
     input[3:0] valids,
@@ -37,7 +37,7 @@ module Write_Select(
     assign select_signal = (choose[0]|choose[1]|choose[2]|choose[3])?choose:rand_choose;
     
     always@(posedge clk) begin
-        #5;
+        #10;
         select_signals <= select_signal;
     end
 

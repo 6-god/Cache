@@ -11,13 +11,16 @@ always @(posedge clk or negedge rst) begin
     if(!rst) begin
         hit <= 0;
         miss <= 0;
-    end else begin
-        if(read_en && valid_out) begin
-            hit <= hit + 1;
-        end else begin
-            miss <= miss + 1;
+    end 
+    else begin
+        if(read_en) begin
+            if(valid_out) begin
+                hit <= hit + 1;
+            end
+            else begin
+                miss <= miss + 1;
+            end 
         end
-    end
     end
 end
 
