@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param synth.incrementalSynthesisCache D:/Xilinx/Vivado/Vivado/2019.2/bin/.Xil/Vivado-17760-DESKTOP-6T1K19J/incrSyn
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a200tfbg676-2

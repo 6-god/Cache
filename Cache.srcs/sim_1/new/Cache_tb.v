@@ -113,13 +113,17 @@ always@(posedge clk or negedge rst) begin
                 ena <= 1;
                 read_en <= 0;
             end
-            10:begin    //清零
-                address <= 32'h0;
-                write_block <=145'h0;
+            10:begin    //read,tag=1111，index=03A,验证9是否被写入
+                address <= 32'h111103A0;
+                read_en <= 1;
+                ena <= 0;
+            end
+            default:begin
+                address <= 0;
+                write_block <= 0;
                 ena <= 0;
                 read_en <= 0;
             end
-
         endcase
         
     end
